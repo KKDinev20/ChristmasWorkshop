@@ -4,5 +4,5 @@ namespace ChristmasApi.Main.Contracts;
 
 public interface ILightFactory
 {
-    Light CreateLight(string description, string christmasToken);
+    Task<Light?> CreateLightAsync(string description, string christmasToken);
 }
