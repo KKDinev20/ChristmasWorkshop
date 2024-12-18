@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "christmas-api", "christmas-api\christmas-api.csproj", "{779CBC9F-0FD3-4F8F-A08C-F5FE99302803}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Christmas_api", "Christmas_api\Christmas_api.csproj", "{779CBC9F-0FD3-4F8F-A08C-F5FE99302803}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

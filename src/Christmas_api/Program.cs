@@ -1,4 +1,4 @@
-namespace christmas_api;
+namespace Christmas_api;
 
 public class Program
 {
