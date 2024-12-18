@@ -1,4 +1,4 @@
-namespace ChristmasApi.Main.Services;
+﻿namespace ChristmasApi.Main.Services;
 
 using ChristmasApi.Main.Contracts;
 using ChristmasApi.Data.Models;

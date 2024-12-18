@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ChristmasApi.Data.Migrations
 {
-    [DbContext(typeof(LightContext))]
-    partial class LightContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(ChristmasApiDbContext))]
+    partial class ChristmasApiDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

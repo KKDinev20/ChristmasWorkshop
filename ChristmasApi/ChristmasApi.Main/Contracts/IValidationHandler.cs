@@ -1,10 +1,6 @@
-﻿// <copyright file="IValidationHandler.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
+﻿namespace ChristmasApi.Main.Contracts;
 
 using ChristmasApi.Data.Models;
-
-namespace ChristmasApi.Main.Contracts;
 
 public interface IValidationHandler
 {

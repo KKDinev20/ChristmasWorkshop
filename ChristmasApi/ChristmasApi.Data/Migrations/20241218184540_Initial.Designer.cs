@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ChristmasApi.Data.Migrations
 {
-    [DbContext(typeof(LightContext))]
-    [Migration("20241218091023_Initial")]
+    [DbContext(typeof(ChristmasApiDbContext))]
+    [Migration("20241218184540_Initial")]
     partial class Initial
     {
         /// <inheritdoc />

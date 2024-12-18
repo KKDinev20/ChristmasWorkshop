@@ -2,5 +2,5 @@
 
 public class DescriptionRequest
 {
-    public string? Desc { get; }
+    public string Desc { get; set; }
 }

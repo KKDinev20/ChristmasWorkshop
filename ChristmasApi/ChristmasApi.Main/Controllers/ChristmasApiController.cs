@@ -32,7 +32,13 @@ public class ChristmasApiController : Controller
             return this.BadRequest(new { error = "Description cannot be empty" });
         }
 
-        var christmasToken = this.Request.Headers["Christmas-Token"].ToString();
+        var response = new
+        {
+            message = "Success!",
+            descr = request.Desc,
+        };
+
+        /*var christmasToken = this.Request.Headers["Christmas-Token"].ToString();
 
         if (string.IsNullOrWhiteSpace(christmasToken))
         {
@@ -49,9 +55,11 @@ public class ChristmasApiController : Controller
         return this.Created(
             "/",
             new
-        {
-            message = "Light created successfully",
-            light,
-        });
+            {
+                message = "Light created successfully",
+                light,
+            });*/
+        
+        return Ok(response);
     }
 }
