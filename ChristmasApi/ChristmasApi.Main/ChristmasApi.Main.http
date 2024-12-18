@@ -1,6 +1,6 @@
 @ChristmasApi.Main_HostAddress = http://localhost:5081
 
-GET {{ChristmasApi.Main_HostAddress}}/weatherforecast/
+GET {{ChristmasApi.Main_HostAddress}}/
 Accept: application/json
 
 ###
