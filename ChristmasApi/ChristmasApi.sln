@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChristmasApi.Main", "ChristmasApi.Main\ChristmasApi.Main.csproj", "{8B9CAF54-0998-4803-B712-1C3E7D28D667}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChristmasApi.Data", "ChristmasApi.Data\ChristmasApi.Data.csproj", "{57B98FAE-9942-4BAC-B705-90CC109C7E3A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B9CAF54-0998-4803-B712-1C3E7D28D667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B9CAF54-0998-4803-B712-1C3E7D28D667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B9CAF54-0998-4803-B712-1C3E7D28D667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B9CAF54-0998-4803-B712-1C3E7D28D667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57B98FAE-9942-4BAC-B705-90CC109C7E3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57B98FAE-9942-4BAC-B705-90CC109C7E3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57B98FAE-9942-4BAC-B705-90CC109C7E3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57B98FAE-9942-4BAC-B705-90CC109C7E3A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
