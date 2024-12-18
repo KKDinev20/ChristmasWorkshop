@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "christmas-api", "christmas-api\christmas-api.csproj", "{779CBC9F-0FD3-4F8F-A08C-F5FE99302803}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{779CBC9F-0FD3-4F8F-A08C-F5FE99302803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{779CBC9F-0FD3-4F8F-A08C-F5FE99302803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{779CBC9F-0FD3-4F8F-A08C-F5FE99302803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{779CBC9F-0FD3-4F8F-A08C-F5FE99302803}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
