@@ -1,7 +1,9 @@
-using ChristmasApi.Data;
-using Microsoft.EntityFrameworkCore;
-
 namespace ChristmasApi.Main;
+
+using ChristmasApi.Data;
+using ChristmasApi.Main.Contracts;
+using ChristmasApi.Main.Services;
+using Microsoft.EntityFrameworkCore;
 
 public class Program
 {
@@ -13,6 +15,8 @@ public class Program
 
         builder.Services.AddDbContext<LightContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
         builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddHttpClient();
+        builder.Services.AddControllers();
         builder.Services.AddSwaggerGen();
 
         var app = builder.Build();
