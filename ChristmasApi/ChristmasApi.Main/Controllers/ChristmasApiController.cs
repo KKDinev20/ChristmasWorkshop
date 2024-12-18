@@ -1,4 +1,6 @@
-﻿namespace ChristmasApi.Main.Controllers;
+﻿using Newtonsoft.Json;
+
+namespace ChristmasApi.Main.Controllers;
 
 using ChristmasApi.Data.Models;
 using ChristmasApi.Main.Contracts;
@@ -21,7 +23,9 @@ public class ChristmasApiController : Controller
     [HttpGet]
     public IActionResult Get()
     {
+        Console.WriteLine("get");
         return this.Ok(new { message = "Christmas API is live!" });
+        
     }
 
     [HttpPost]
@@ -38,7 +42,7 @@ public class ChristmasApiController : Controller
             descr = request.Desc,
         };
 
-        /*var christmasToken = this.Request.Headers["Christmas-Token"].ToString();
+        var christmasToken = this.Request.Headers["Christmas-Token"].ToString();
 
         if (string.IsNullOrWhiteSpace(christmasToken))
         {
@@ -52,14 +56,9 @@ public class ChristmasApiController : Controller
             return this.BadRequest(new { error = "Failed to create light due to validation errors" });
         }
 
-        return this.Created(
-            "/",
-            new
-            {
-                message = "Light created successfully",
-                light,
-            });*/
-        
-        return Ok(response);
+        string json = JsonConvert.SerializeObject(light, Formatting.Indented);
+
+        return this.Ok(json);
+
     }
 }

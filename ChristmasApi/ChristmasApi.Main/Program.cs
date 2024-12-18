@@ -30,8 +30,11 @@ public class Program
 
         builder.Services.AddAuthorization();
         builder.Services.AddHttpClient();
-
-        builder.Services.AddScoped<IValidationHandler, CoordinateValidationHandler>();
+        
+        builder.Services.AddScoped<AbstractHandler, CoordinateValidationHandler>();
+        builder.Services.AddScoped<AbstractHandler, ColorValidationHandler>();
+        builder.Services.AddScoped<AbstractHandler, EffectValidationHandler>();
+        builder.Services.AddScoped<AbstractHandler, RadiusValidationHandler>();
         builder.Services.AddScoped<IValidationService, ValidationService>();
         builder.Services.AddScoped<ILightFactory, LightFactory>();
 
