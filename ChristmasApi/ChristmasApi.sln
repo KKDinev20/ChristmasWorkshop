@@ -4,6 +4,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChristmasApi.Main", "Christ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChristmasApi.Data", "ChristmasApi.Data\ChristmasApi.Data.csproj", "{57B98FAE-9942-4BAC-B705-90CC109C7E3A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFiles", "SolutionFiles", "{CB64D8A8-9974-4B06-A6A8-6DF803CF4E2B}"
+	ProjectSection(SolutionItems) = preProject
+		..\EduSystem.ruleset = ..\EduSystem.ruleset
+		..\stylecop.json = ..\stylecop.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
