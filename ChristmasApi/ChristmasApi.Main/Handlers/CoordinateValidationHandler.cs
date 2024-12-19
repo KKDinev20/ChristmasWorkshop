@@ -20,10 +20,8 @@ public class CoordinateValidationHandler : AbstractHandler
             $"https://polygon.gsk567.com/?x={light.X}&y={light.Y}",
             new { desc = light.Description });
 
-        Console.WriteLine($"Response: {response.StatusCode}");
         if (!response.IsSuccessStatusCode)
         {
-            Console.WriteLine("Coordinate validation failed: HTTP error.");
             return false;
         }
 
@@ -32,7 +30,6 @@ public class CoordinateValidationHandler : AbstractHandler
 
         if (jsonResponse != null && jsonResponse.In)
         {
-            Console.WriteLine("Coordinate validation succeeded.");
             return await base.ValidateAsync(light);
         }
 
