@@ -19,7 +19,6 @@ public class LightFactory : ILightFactory
 
         var light = new Light
         {
-            Id = 0,
             X = x,
             Y = y,
             Radius = (this.random.NextDouble() * (6 - 3)) + 3,

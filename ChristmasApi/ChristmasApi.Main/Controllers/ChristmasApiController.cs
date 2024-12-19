@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using ChristmasApi.Data;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace ChristmasApi.Main.Controllers;
 
@@ -14,18 +16,18 @@ using Microsoft.AspNetCore.Mvc;
 public class ChristmasApiController : Controller
 {
     private readonly ILightFactory lightFactory;
+    private readonly ChristmasApiDbContext dbContext;
 
-    public ChristmasApiController(ILightFactory lightFactory)
+    public ChristmasApiController(ILightFactory lightFactory, ChristmasApiDbContext dbContext)
     {
         this.lightFactory = lightFactory;
+        this.dbContext = dbContext;
     }
 
     [HttpGet]
-    public IActionResult Get()
+    public async Task<IActionResult> Get()
     {
-        Console.WriteLine("get");
-        return this.Ok(new { message = "Christmas API is live!" });
-        
+        return this.Ok(JsonConvert.SerializeObject(this.dbContext.Lights.ToList()));
     }
 
     [HttpPost]
@@ -35,12 +37,6 @@ public class ChristmasApiController : Controller
         {
             return this.BadRequest(new { error = "Description cannot be empty" });
         }
-
-        var response = new
-        {
-            message = "Success!",
-            descr = request.Desc,
-        };
 
         var christmasToken = this.Request.Headers["Christmas-Token"].ToString();
 
@@ -56,9 +52,10 @@ public class ChristmasApiController : Controller
             return this.BadRequest(new { error = "Failed to create light due to validation errors" });
         }
 
-        string json = JsonConvert.SerializeObject(light, Formatting.Indented);
+        dbContext.Lights.Add(light);
+        dbContext.SaveChanges();
 
-        return this.Ok(json);
+        return this.Ok(new { success = true });
 
     }
 }
