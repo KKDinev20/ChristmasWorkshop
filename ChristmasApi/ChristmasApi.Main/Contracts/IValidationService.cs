@@ -1,8 +1,6 @@
-﻿
+﻿namespace ChristmasApi.Main.Contracts;
 
 using ChristmasApi.Data.Models;
-
-namespace ChristmasApi.Main.Contracts;
 
 public interface IValidationService
 {

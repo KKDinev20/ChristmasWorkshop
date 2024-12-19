@@ -21,7 +21,7 @@ public class Program
                     .AllowAnyMethod()
                     .AllowCredentials()
                     .SetIsOriginAllowedToAllowWildcardSubdomains()
-                    .WithHeaders("Access-Control-Allow-Private-Network"); 
+                    .WithHeaders("Access-Control-Allow-Private-Network");
             });
         });
 
@@ -29,14 +29,20 @@ public class Program
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
         builder.Services.AddAuthorization();
+
         builder.Services.AddHttpClient();
-        
+        builder.Services.AddHttpContextAccessor();
+
         builder.Services.AddScoped<AbstractHandler, CoordinateValidationHandler>();
         builder.Services.AddScoped<AbstractHandler, ColorValidationHandler>();
         builder.Services.AddScoped<AbstractHandler, EffectValidationHandler>();
         builder.Services.AddScoped<AbstractHandler, RadiusValidationHandler>();
-        builder.Services.AddScoped<IValidationService, ValidationService>();
+
         builder.Services.AddScoped<ILightFactory, LightFactory>();
+        builder.Services.AddScoped<IValidationService, ValidationService>();
+
+        builder.Services.AddScoped<ICurrentToken, CurrentToken>();
+        builder.Services.AddHostedService<ChristmasTokenService>();
 
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();

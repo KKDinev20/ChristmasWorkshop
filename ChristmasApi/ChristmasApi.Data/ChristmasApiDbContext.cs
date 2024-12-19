@@ -5,7 +5,8 @@ namespace ChristmasApi.Data;
 
 public class ChristmasApiDbContext : DbContext
 {
-    public ChristmasApiDbContext(DbContextOptions<ChristmasApiDbContext> options) : base(options)
+    public ChristmasApiDbContext(DbContextOptions<ChristmasApiDbContext> options)
+        : base(options)
     {
     }
 

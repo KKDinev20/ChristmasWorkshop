@@ -13,10 +13,10 @@ public class CoordinateValidationHandler : AbstractHandler
     {
         this.httpClient = httpClient;
     }
-    
+
     public override async Task<bool> ValidateAsync(Light light)
     {
-        var response = await httpClient.PostAsJsonAsync(
+        var response = await this.httpClient.PostAsJsonAsync(
             $"https://polygon.gsk567.com/?x={light.X}&y={light.Y}",
             new { desc = light.Description });
 
@@ -41,7 +41,7 @@ public class CoordinateValidationHandler : AbstractHandler
         light.Y = y;
         return await this.ValidateAsync(light);
     }
-    
+
     private (double X, double Y) GenerateRandomPoint()
     {
         Random random = new Random();

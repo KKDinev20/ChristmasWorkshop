@@ -7,10 +7,6 @@ using ChristmasApi.Main.Contracts;
 
 public class ValidationService : IValidationService
 {
-    public ValidationService()
-    {
-    }
-
     public async Task<bool> ValidateLightAsync(Light light)
     {
         Console.WriteLine("ValidateLightAsync");

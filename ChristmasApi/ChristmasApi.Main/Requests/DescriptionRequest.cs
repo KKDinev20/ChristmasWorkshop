@@ -1,6 +1,9 @@
-﻿namespace ChristmasApi.Main.Requests;
+﻿using Newtonsoft.Json;
+
+namespace ChristmasApi.Main.Requests;
 
 public class DescriptionRequest
 {
-    public string Desc { get; set; }
+    [JsonProperty("desc")]
+    public string? Desc { get; set; }
 }

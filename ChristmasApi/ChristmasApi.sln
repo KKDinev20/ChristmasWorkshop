@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChristmasApi.Data", "Christ
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFiles", "SolutionFiles", "{CB64D8A8-9974-4B06-A6A8-6DF803CF4E2B}"
 	ProjectSection(SolutionItems) = preProject
-		..\EduSystem.ruleset = ..\EduSystem.ruleset
+		..\ChristmasApi.ruleset = ..\ChristmasApi.ruleset
 		..\stylecop.json = ..\stylecop.json
 	EndProjectSection
 EndProject

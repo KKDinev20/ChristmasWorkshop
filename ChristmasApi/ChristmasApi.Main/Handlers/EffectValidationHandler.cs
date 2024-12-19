@@ -15,6 +15,7 @@ public class EffectValidationHandler : AbstractHandler
             Console.WriteLine("false effect");
             return await Task.FromResult(false);
         }
+
         Console.WriteLine("true effect");
         return await base.ValidateAsync(light);
     }

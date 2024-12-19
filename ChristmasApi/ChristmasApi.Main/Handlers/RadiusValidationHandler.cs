@@ -18,6 +18,7 @@ public class RadiusValidationHandler : AbstractHandler
 
             light.Radius = radius;
         }
+
         return await base.ValidateAsync(light);
     }
 }

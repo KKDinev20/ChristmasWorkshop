@@ -12,6 +12,7 @@ public class ColorValidationHandler : AbstractHandler
         {
             return await Task.FromResult(false);
         }
+
         return await base.ValidateAsync(light);
     }
 }

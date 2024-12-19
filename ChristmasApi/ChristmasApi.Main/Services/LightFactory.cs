@@ -1,19 +1,22 @@
 ﻿namespace ChristmasApi.Main.Services;
 
-using ChristmasApi.Main.Contracts;
 using ChristmasApi.Data.Models;
+using ChristmasApi.Main.Contracts;
 
 public class LightFactory : ILightFactory
 {
     private readonly Random random = new Random();
     private readonly IValidationService validationService;
+    private readonly ICurrentToken currentToken;
 
-    public LightFactory(IValidationService validationService)
+    public LightFactory(IValidationService validationService, ICurrentToken
+        currentToken)
     {
         this.validationService = validationService;
+        this.currentToken = currentToken;
     }
 
-    public async Task<Light?> CreateLightAsync(string description, string christmasToken)
+    public async Task<Light?> CreateLightAsync(string description)
     {
         var (x, y) = this.GenerateRandomPoint();
 
@@ -25,7 +28,7 @@ public class LightFactory : ILightFactory
             Color = this.GetRandomColor(),
             Effects = this.GetRandomEffect(),
             Description = description,
-            ChristmasToken = christmasToken,
+            ChristmasToken = this.currentToken.Value!,
         };
 
         var isValid = await this.validationService.ValidateLightAsync(light);
